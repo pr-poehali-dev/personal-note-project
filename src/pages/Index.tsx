@@ -71,6 +71,34 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-[#0d0d0d] text-white font-sans">
+      {/* Радуга на фоне */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden">
+        <div style={{
+          position: "absolute",
+          top: "-60px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "900px",
+          height: "450px",
+          borderRadius: "50% 50% 0 0 / 100% 100% 0 0",
+          background: "conic-gradient(from 180deg at 50% 100%, #ff000022, #ff7f0022, #ffff0018, #00ff0018, #0000ff20, #8b00ff22, #ff000022)",
+          filter: "blur(40px)",
+          opacity: 0.6,
+        }} />
+        <div style={{
+          position: "absolute",
+          top: "20px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "700px",
+          height: "350px",
+          borderRadius: "50% 50% 0 0 / 100% 100% 0 0",
+          background: "conic-gradient(from 180deg at 50% 100%, #ff006610, #ff990015, #ffee0012, #00cc6615, #0066ff18, #9900ff15, #ff006610)",
+          filter: "blur(25px)",
+          opacity: 0.5,
+        }} />
+      </div>
+
       {/* Фоновые блики */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-amber-500/8 blur-[120px] rounded-full" />
