@@ -95,7 +95,7 @@ const Index = () => {
               <span className="text-3xl">📋</span>
               <div>
                 <p className="font-bold text-zinc-100 mb-0.5">Наборщики</p>
-                <p className="text-zinc-400 text-sm leading-relaxed">Занимаются набором новых людей в наш клуб. Хочешь присоединиться к команде — обращайся к ним!</p>
+                <p className="text-zinc-400 text-sm leading-relaxed">Занимаются набором людей в наш клуб. Хочешь к нам? Скорее пиши в ЛС! Мы рады тебя видеть! 🎉</p>
               </div>
             </div>
           </div>
