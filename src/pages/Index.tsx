@@ -48,7 +48,7 @@ const Index = () => {
 
       <div className="relative z-10 max-w-2xl mx-auto px-5 py-10">
         {/* Шапка */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-6">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-3xl mb-4 shadow-lg shadow-amber-500/20">
             🌴
           </div>
@@ -57,6 +57,20 @@ const Index = () => {
             Сахара<span className="text-amber-400">-Пати</span>
           </h1>
           <p className="text-zinc-500 text-sm mt-2 tracking-widest uppercase">Ночной клуб</p>
+        </div>
+
+        {/* Приветствие */}
+        <div className="relative mb-10 rounded-2xl overflow-hidden border border-amber-500/20 bg-gradient-to-br from-amber-500/10 via-orange-500/5 to-zinc-900/80 p-6">
+          <div className="absolute top-3 right-4 text-4xl opacity-20 select-none">🎉</div>
+          <div className="absolute bottom-3 left-4 text-3xl opacity-10 select-none">✨</div>
+          <p className="text-amber-400 font-bold text-lg mb-2">Привет! 👋</p>
+          <p className="text-zinc-200 leading-relaxed text-sm">
+            Добро пожаловать в наш клуб <span className="text-amber-400 font-semibold">Сахара-Пати</span>!
+            Здесь ты можешь хорошо провести вечер с друзьями 🥂
+          </p>
+          <p className="text-zinc-400 leading-relaxed text-sm mt-2">
+            Или, если хочешь — познакомься с кем-нибудь новым. У нас всегда тепло и весело! 🌴🔥
+          </p>
         </div>
 
         {/* Табы */}
