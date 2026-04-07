@@ -120,7 +120,7 @@ const Index = () => {
               width: "520px",
               height: "270px",
               zIndex: 0,
-              opacity: 0.45,
+              opacity: 0.28,
             }}
           >
             <defs>
@@ -140,8 +140,25 @@ const Index = () => {
             <use href="#arc2" fill="none" stroke="#4b0082" strokeWidth="16" />
             <use href="#arc1" fill="none" stroke="#8b00ff" strokeWidth="16" />
           </svg>
-          <div className="relative z-10 inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-4xl mb-5 shadow-xl shadow-amber-500/30">
-            🌴
+          <div className="relative z-10 inline-flex items-center justify-center mb-5">
+            <div className="relative">
+              {/* Звёздочки вокруг */}
+              {[
+                { top: "-14px", left: "50%", transform: "translateX(-50%)" },
+                { top: "-8px",  left: "-14px" },
+                { top: "-8px",  right: "-14px" },
+                { top: "50%",   left: "-18px", transform: "translateY(-50%)" },
+                { top: "50%",   right: "-18px", transform: "translateY(-50%)" },
+                { bottom: "-8px", left: "-14px" },
+                { bottom: "-8px", right: "-14px" },
+                { bottom: "-14px", left: "50%", transform: "translateX(-50%)" },
+              ].map((pos, i) => (
+                <span key={i} style={{ position: "absolute", fontSize: "12px", ...pos, color: "#ffd700", lineHeight: 1 }}>✦</span>
+              ))}
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-4xl shadow-xl shadow-amber-500/30">
+                🌴
+              </div>
+            </div>
           </div>
           <h1
             className="relative z-10 font-black tracking-tight mb-1 leading-none"
