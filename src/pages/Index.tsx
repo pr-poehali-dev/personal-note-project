@@ -12,6 +12,12 @@ const menu = {
     { name: "Мультифрукт", emoji: "🍹" },
     { name: "Сок лесные ягоды", emoji: "🫐" },
   ],
+  shakes: [
+    { name: "Молочный коктейль черничный", emoji: "🫐" },
+    { name: "Молочный коктейль клубничный", emoji: "🍓" },
+    { name: "Молочный коктейль виноградный", emoji: "🍇" },
+    { name: "Молочный коктейль апельсиновый", emoji: "🍊" },
+  ],
   soft: [
     { name: "Минералка", emoji: "💧" },
     { name: "Кока-Кола", emoji: "🥤" },
@@ -223,6 +229,22 @@ const Index = () => {
               </div>
               <div className="divide-y divide-zinc-800/60">
                 {menu.juices.map((item) => (
+                  <div key={item.name} className="flex items-center gap-3 px-5 py-3.5 hover:bg-zinc-800/50 transition-colors">
+                    <span className="text-xl">{item.emoji}</span>
+                    <span className="text-zinc-200 font-medium">{item.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Молочные коктейли */}
+            <div className="bg-zinc-900/80 rounded-2xl border border-zinc-800 overflow-hidden">
+              <div className="px-5 py-3 border-b border-zinc-800 flex items-center gap-2">
+                <span className="text-lg">🥛</span>
+                <span className="font-bold text-purple-400 tracking-wide uppercase text-xs">Молочные коктейли со сливками</span>
+              </div>
+              <div className="divide-y divide-zinc-800/60">
+                {menu.shakes.map((item) => (
                   <div key={item.name} className="flex items-center gap-3 px-5 py-3.5 hover:bg-zinc-800/50 transition-colors">
                     <span className="text-xl">{item.emoji}</span>
                     <span className="text-zinc-200 font-medium">{item.name}</span>
