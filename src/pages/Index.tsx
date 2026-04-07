@@ -19,6 +19,30 @@ const menu = {
     { name: "Фреш Бар", emoji: "🌿" },
     { name: "Милкис", emoji: "🍬" },
   ],
+  pies: [
+    { name: "Пирог с вишней", emoji: "🍒" },
+    { name: "Яблочный пирог", emoji: "🥧" },
+  ],
+  mains: [
+    { name: "Салат с помидорами и огурцами", emoji: "🥗" },
+    { name: "Шашлык с грибами", emoji: "🍄" },
+    { name: "Шашлык с говядиной", emoji: "🥩" },
+    { name: "Шашлык с курицей", emoji: "🍗" },
+    { name: "Бутерброд с ветчиной", emoji: "🥪" },
+    { name: "Обычный бутерброд", emoji: "🍞" },
+  ],
+  sweets: [
+    { name: "Спелая клубника", emoji: "🍓" },
+    { name: "Пончик ванильный", emoji: "🍩" },
+    { name: "Пончик шоколадный", emoji: "🍫" },
+    { name: "Пончик клубничный", emoji: "🍓" },
+    { name: "Пирожное с голубикой", emoji: "🫐" },
+    { name: "Пирожное с клубникой", emoji: "🍓" },
+    { name: "Макаронс банановый", emoji: "🍌" },
+    { name: "Макаронс клубничный", emoji: "🍓" },
+    { name: "Макаронс голубичный", emoji: "🫐" },
+    { name: "Печенье с шоколадной крошкой", emoji: "🍪" },
+  ],
 };
 
 const rules = [
@@ -215,6 +239,54 @@ const Index = () => {
               </div>
               <div className="divide-y divide-zinc-800/60">
                 {menu.soft.map((item) => (
+                  <div key={item.name} className="flex items-center gap-3 px-5 py-3.5 hover:bg-zinc-800/50 transition-colors">
+                    <span className="text-xl">{item.emoji}</span>
+                    <span className="text-zinc-200 font-medium">{item.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Пироги */}
+            <div className="bg-zinc-900/80 rounded-2xl border border-zinc-800 overflow-hidden">
+              <div className="px-5 py-3 border-b border-zinc-800 flex items-center gap-2">
+                <span className="text-lg">🥧</span>
+                <span className="font-bold text-yellow-400 tracking-wide uppercase text-xs">Выпечка</span>
+              </div>
+              <div className="divide-y divide-zinc-800/60">
+                {menu.pies.map((item) => (
+                  <div key={item.name} className="flex items-center gap-3 px-5 py-3.5 hover:bg-zinc-800/50 transition-colors">
+                    <span className="text-xl">{item.emoji}</span>
+                    <span className="text-zinc-200 font-medium">{item.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Основные блюда */}
+            <div className="bg-zinc-900/80 rounded-2xl border border-zinc-800 overflow-hidden">
+              <div className="px-5 py-3 border-b border-zinc-800 flex items-center gap-2">
+                <span className="text-lg">🍽️</span>
+                <span className="font-bold text-red-400 tracking-wide uppercase text-xs">Основные блюда</span>
+              </div>
+              <div className="divide-y divide-zinc-800/60">
+                {menu.mains.map((item) => (
+                  <div key={item.name} className="flex items-center gap-3 px-5 py-3.5 hover:bg-zinc-800/50 transition-colors">
+                    <span className="text-xl">{item.emoji}</span>
+                    <span className="text-zinc-200 font-medium">{item.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Сладкое */}
+            <div className="bg-zinc-900/80 rounded-2xl border border-zinc-800 overflow-hidden">
+              <div className="px-5 py-3 border-b border-zinc-800 flex items-center gap-2">
+                <span className="text-lg">🍰</span>
+                <span className="font-bold text-pink-400 tracking-wide uppercase text-xs">Сладкое</span>
+              </div>
+              <div className="divide-y divide-zinc-800/60">
+                {menu.sweets.map((item) => (
                   <div key={item.name} className="flex items-center gap-3 px-5 py-3.5 hover:bg-zinc-800/50 transition-colors">
                     <span className="text-xl">{item.emoji}</span>
                     <span className="text-zinc-200 font-medium">{item.name}</span>
