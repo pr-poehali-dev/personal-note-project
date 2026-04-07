@@ -71,49 +71,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-[#0d0d0d] text-white font-sans">
-      {/* Радуга на фоне */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        {/* Внешняя радуга — широкая, все цвета */}
-        <div style={{
-          position: "absolute",
-          top: "-180px",
-          left: "50%",
-          transform: "translateX(-50%)",
-          width: "1100px",
-          height: "600px",
-          borderRadius: "50% 50% 0 0 / 100% 100% 0 0",
-          background: "conic-gradient(from 180deg at 50% 100%, #ff000080, #ff7f0080, #ffff0070, #00ff0070, #0000ff80, #8b00ff80, #ff000080)",
-          filter: "blur(18px)",
-          opacity: 0.85,
-        }} />
-        {/* Внутренняя радуга — чёткая полоса */}
-        <div style={{
-          position: "absolute",
-          top: "-120px",
-          left: "50%",
-          transform: "translateX(-50%)",
-          width: "850px",
-          height: "480px",
-          borderRadius: "50% 50% 0 0 / 100% 100% 0 0",
-          background: "conic-gradient(from 180deg at 50% 100%, #ff000099, #ff7f0099, #ffff0088, #00ff0088, #0000ff99, #8b00ff99, #ff000099)",
-          filter: "blur(8px)",
-          opacity: 0.7,
-        }} />
-        {/* Тёмная маска в центре — чтобы выглядело как арка */}
-        <div style={{
-          position: "absolute",
-          top: "-60px",
-          left: "50%",
-          transform: "translateX(-50%)",
-          width: "650px",
-          height: "380px",
-          borderRadius: "50% 50% 0 0 / 100% 100% 0 0",
-          background: "#0d0d0d",
-          filter: "blur(15px)",
-          opacity: 0.95,
-        }} />
-      </div>
-
       {/* Фоновые блики */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-amber-500/8 blur-[120px] rounded-full" />
@@ -150,12 +107,40 @@ const Index = () => {
 
       <div className="relative z-10 max-w-2xl mx-auto px-5 py-10">
         {/* Шапка */}
-        <div className="text-center mb-6">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-4xl mb-5 shadow-xl shadow-amber-500/30">
+        <div className="text-center mb-6 relative">
+          {/* Радуга за надписью */}
+          <div style={{
+            position: "absolute",
+            bottom: "10px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: "600px",
+            height: "320px",
+            borderRadius: "50% 50% 0 0 / 100% 100% 0 0",
+            background: "conic-gradient(from 180deg at 50% 100%, #ff0000cc, #ff7f00cc, #ffff00bb, #00ff00bb, #0000ffcc, #8b00ffcc, #ff0000cc)",
+            filter: "blur(6px)",
+            opacity: 0.55,
+            zIndex: 0,
+          }} />
+          {/* Тёмная маска внутри арки */}
+          <div style={{
+            position: "absolute",
+            bottom: "10px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: "480px",
+            height: "260px",
+            borderRadius: "50% 50% 0 0 / 100% 100% 0 0",
+            background: "#0d0d0d",
+            filter: "blur(8px)",
+            opacity: 0.98,
+            zIndex: 1,
+          }} />
+          <div className="relative z-10 inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-4xl mb-5 shadow-xl shadow-amber-500/30">
             🌴
           </div>
           <h1
-            className="font-black tracking-tight mb-1 leading-none"
+            className="relative z-10 font-black tracking-tight mb-1 leading-none"
             style={{
               fontFamily: "'Impact', 'Arial Black', sans-serif",
               fontSize: "clamp(3rem, 10vw, 5rem)",
@@ -170,7 +155,7 @@ const Index = () => {
             САХАРА-ПАТИ
           </h1>
           <p
-            className="text-sm mt-3 tracking-[0.3em] uppercase font-bold"
+            className="relative z-10 text-sm mt-3 tracking-[0.3em] uppercase font-bold"
             style={{
               color: "#ff6b00",
               textShadow: "0 0 10px rgba(255,107,0,0.6), 0 0 20px rgba(255,107,0,0.3)",
