@@ -120,7 +120,8 @@ const Index = () => {
               width: "520px",
               height: "270px",
               zIndex: 0,
-              opacity: 0.28,
+              opacity: 0.35,
+              filter: "blur(3px)",
             }}
           >
             <defs>
