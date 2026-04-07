@@ -81,9 +81,9 @@ const Index = () => {
           width: "900px",
           height: "450px",
           borderRadius: "50% 50% 0 0 / 100% 100% 0 0",
-          background: "conic-gradient(from 180deg at 50% 100%, #ff000022, #ff7f0022, #ffff0018, #00ff0018, #0000ff20, #8b00ff22, #ff000022)",
+          background: "conic-gradient(from 180deg at 50% 100%, #ff000055, #ff7f0055, #ffff0044, #00ff0044, #0000ff55, #8b00ff55, #ff000055)",
           filter: "blur(40px)",
-          opacity: 0.6,
+          opacity: 0.9,
         }} />
         <div style={{
           position: "absolute",
@@ -93,9 +93,9 @@ const Index = () => {
           width: "700px",
           height: "350px",
           borderRadius: "50% 50% 0 0 / 100% 100% 0 0",
-          background: "conic-gradient(from 180deg at 50% 100%, #ff006610, #ff990015, #ffee0012, #00cc6615, #0066ff18, #9900ff15, #ff006610)",
+          background: "conic-gradient(from 180deg at 50% 100%, #ff006640, #ff990045, #ffee0040, #00cc6640, #0066ff45, #9900ff40, #ff006640)",
           filter: "blur(25px)",
-          opacity: 0.5,
+          opacity: 0.85,
         }} />
       </div>
 
