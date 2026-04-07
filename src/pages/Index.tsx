@@ -73,29 +73,44 @@ const Index = () => {
     <div className="min-h-screen bg-[#0d0d0d] text-white font-sans">
       {/* Радуга на фоне */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
+        {/* Внешняя радуга — широкая, все цвета */}
+        <div style={{
+          position: "absolute",
+          top: "-180px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "1100px",
+          height: "600px",
+          borderRadius: "50% 50% 0 0 / 100% 100% 0 0",
+          background: "conic-gradient(from 180deg at 50% 100%, #ff000080, #ff7f0080, #ffff0070, #00ff0070, #0000ff80, #8b00ff80, #ff000080)",
+          filter: "blur(18px)",
+          opacity: 0.85,
+        }} />
+        {/* Внутренняя радуга — чёткая полоса */}
+        <div style={{
+          position: "absolute",
+          top: "-120px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "850px",
+          height: "480px",
+          borderRadius: "50% 50% 0 0 / 100% 100% 0 0",
+          background: "conic-gradient(from 180deg at 50% 100%, #ff000099, #ff7f0099, #ffff0088, #00ff0088, #0000ff99, #8b00ff99, #ff000099)",
+          filter: "blur(8px)",
+          opacity: 0.7,
+        }} />
+        {/* Тёмная маска в центре — чтобы выглядело как арка */}
         <div style={{
           position: "absolute",
           top: "-60px",
           left: "50%",
           transform: "translateX(-50%)",
-          width: "900px",
-          height: "450px",
+          width: "650px",
+          height: "380px",
           borderRadius: "50% 50% 0 0 / 100% 100% 0 0",
-          background: "conic-gradient(from 180deg at 50% 100%, #ff000055, #ff7f0055, #ffff0044, #00ff0044, #0000ff55, #8b00ff55, #ff000055)",
-          filter: "blur(40px)",
-          opacity: 0.9,
-        }} />
-        <div style={{
-          position: "absolute",
-          top: "20px",
-          left: "50%",
-          transform: "translateX(-50%)",
-          width: "700px",
-          height: "350px",
-          borderRadius: "50% 50% 0 0 / 100% 100% 0 0",
-          background: "conic-gradient(from 180deg at 50% 100%, #ff006640, #ff990045, #ffee0040, #00cc6640, #0066ff45, #9900ff40, #ff006640)",
-          filter: "blur(25px)",
-          opacity: 0.85,
+          background: "#0d0d0d",
+          filter: "blur(15px)",
+          opacity: 0.95,
         }} />
       </div>
 
