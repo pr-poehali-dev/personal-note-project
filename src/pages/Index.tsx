@@ -73,6 +73,34 @@ const Index = () => {
           </p>
         </div>
 
+        {/* Команда */}
+        <div className="mb-10">
+          <h2 className="text-center text-amber-400 font-bold text-xs tracking-widest uppercase mb-4">Наша команда</h2>
+          <div className="grid grid-cols-1 gap-3">
+            <div className="flex items-start gap-4 bg-zinc-900/80 border border-zinc-800 rounded-2xl px-5 py-4 hover:border-amber-500/20 transition-all">
+              <span className="text-3xl">🍹</span>
+              <div>
+                <p className="font-bold text-zinc-100 mb-0.5">Бармены</p>
+                <p className="text-zinc-400 text-sm leading-relaxed">Всегда готовы налить тебе что-нибудь вкусненькое. Просто подходи и заказывай!</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4 bg-zinc-900/80 border border-zinc-800 rounded-2xl px-5 py-4 hover:border-amber-500/20 transition-all">
+              <span className="text-3xl">🛡️</span>
+              <div>
+                <p className="font-bold text-zinc-100 mb-0.5">Охранники</p>
+                <p className="text-zinc-400 text-sm leading-relaxed">Следят за посетителями и поддерживают порядок в клубе. Твоя безопасность — наш приоритет.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4 bg-zinc-900/80 border border-zinc-800 rounded-2xl px-5 py-4 hover:border-amber-500/20 transition-all">
+              <span className="text-3xl">📋</span>
+              <div>
+                <p className="font-bold text-zinc-100 mb-0.5">Наборщики</p>
+                <p className="text-zinc-400 text-sm leading-relaxed">Занимаются набором новых людей в наш клуб. Хочешь присоединиться к команде — обращайся к ним!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Табы */}
         <div className="flex bg-zinc-900 rounded-xl p-1 mb-8 border border-zinc-800">
           <button
