@@ -42,21 +42,68 @@ const Index = () => {
     <div className="min-h-screen bg-[#0d0d0d] text-white font-sans">
       {/* Фоновые блики */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-amber-500/5 blur-[120px] rounded-full" />
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-orange-600/5 blur-[100px] rounded-full" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-amber-500/8 blur-[120px] rounded-full" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-orange-600/8 blur-[100px] rounded-full" />
+        <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-pink-600/5 blur-[80px] rounded-full" />
+      </div>
+
+      {/* Фоновые смайлики */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden select-none z-0">
+        {[
+          { e: "🍹", top: "8%",  left: "5%",  size: "2.5rem", op: "0.07", rot: "-15deg" },
+          { e: "🎶", top: "15%", left: "88%", size: "2rem",   op: "0.06", rot: "10deg" },
+          { e: "🌴", top: "30%", left: "3%",  size: "3rem",   op: "0.06", rot: "-8deg" },
+          { e: "🔥", top: "5%",  left: "60%", size: "2rem",   op: "0.07", rot: "0deg" },
+          { e: "💃", top: "50%", left: "92%", size: "2.5rem", op: "0.06", rot: "5deg" },
+          { e: "🥂", top: "65%", left: "4%",  size: "2rem",   op: "0.07", rot: "-10deg" },
+          { e: "🎉", top: "75%", left: "85%", size: "2.5rem", op: "0.06", rot: "12deg" },
+          { e: "✨", top: "88%", left: "20%", size: "1.8rem", op: "0.08", rot: "0deg" },
+          { e: "🎸", top: "40%", left: "90%", size: "2rem",   op: "0.05", rot: "-5deg" },
+          { e: "🪩", top: "22%", left: "45%", size: "2rem",   op: "0.05", rot: "0deg" },
+          { e: "🍾", top: "58%", left: "50%", size: "2rem",   op: "0.05", rot: "8deg" },
+          { e: "⚡", top: "80%", left: "65%", size: "1.8rem", op: "0.07", rot: "0deg" },
+        ].map((item, i) => (
+          <span key={i} style={{
+            position: "absolute",
+            top: item.top,
+            left: item.left,
+            fontSize: item.size,
+            opacity: item.op,
+            transform: `rotate(${item.rot})`,
+          }}>{item.e}</span>
+        ))}
       </div>
 
       <div className="relative z-10 max-w-2xl mx-auto px-5 py-10">
         {/* Шапка */}
         <div className="text-center mb-6">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-3xl mb-4 shadow-lg shadow-amber-500/20">
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-4xl mb-5 shadow-xl shadow-amber-500/30">
             🌴
           </div>
-          <h1 className="text-5xl font-black tracking-tight mb-1"
-            style={{ fontFamily: "'Georgia', serif" }}>
-            Сахара<span className="text-amber-400">-Пати</span>
+          <h1
+            className="font-black tracking-tight mb-1 leading-none"
+            style={{
+              fontFamily: "'Impact', 'Arial Black', sans-serif",
+              fontSize: "clamp(3rem, 10vw, 5rem)",
+              background: "linear-gradient(135deg, #ffd700 0%, #ff6b00 40%, #ff2d78 70%, #bf00ff 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              filter: "drop-shadow(0 0 20px rgba(255, 160, 0, 0.5))",
+              letterSpacing: "0.02em",
+            }}
+          >
+            САХАРА-ПАТИ
           </h1>
-          <p className="text-zinc-500 text-sm mt-2 tracking-widest uppercase">Ночной клуб</p>
+          <p
+            className="text-sm mt-3 tracking-[0.3em] uppercase font-bold"
+            style={{
+              color: "#ff6b00",
+              textShadow: "0 0 10px rgba(255,107,0,0.6), 0 0 20px rgba(255,107,0,0.3)",
+            }}
+          >
+            ✦ Ночной клуб ✦
+          </p>
         </div>
 
         {/* Приветствие */}
