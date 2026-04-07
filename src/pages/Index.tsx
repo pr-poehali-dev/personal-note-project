@@ -108,34 +108,38 @@ const Index = () => {
       <div className="relative z-10 max-w-2xl mx-auto px-5 py-10">
         {/* Шапка */}
         <div className="text-center mb-6 relative">
-          {/* Радуга за надписью */}
-          <div style={{
-            position: "absolute",
-            bottom: "10px",
-            left: "50%",
-            transform: "translateX(-50%)",
-            width: "600px",
-            height: "320px",
-            borderRadius: "50% 50% 0 0 / 100% 100% 0 0",
-            background: "conic-gradient(from 180deg at 50% 100%, #ff0000cc, #ff7f00cc, #ffff00bb, #00ff00bb, #0000ffcc, #8b00ffcc, #ff0000cc)",
-            filter: "blur(6px)",
-            opacity: 0.55,
-            zIndex: 0,
-          }} />
-          {/* Тёмная маска внутри арки */}
-          <div style={{
-            position: "absolute",
-            bottom: "10px",
-            left: "50%",
-            transform: "translateX(-50%)",
-            width: "480px",
-            height: "260px",
-            borderRadius: "50% 50% 0 0 / 100% 100% 0 0",
-            background: "#0d0d0d",
-            filter: "blur(8px)",
-            opacity: 0.98,
-            zIndex: 1,
-          }} />
+          {/* Радуга — чёткая SVG арка */}
+          <svg
+            viewBox="0 0 500 260"
+            xmlns="http://www.w3.org/2000/svg"
+            style={{
+              position: "absolute",
+              bottom: "-10px",
+              left: "50%",
+              transform: "translateX(-50%)",
+              width: "520px",
+              height: "270px",
+              zIndex: 0,
+              opacity: 0.45,
+            }}
+          >
+            <defs>
+              <path id="arc7" d="M 20,250 A 230,230 0 0,1 480,250" />
+              <path id="arc6" d="M 38,250 A 212,212 0 0,1 462,250" />
+              <path id="arc5" d="M 56,250 A 194,194 0 0,1 444,250" />
+              <path id="arc4" d="M 74,250 A 176,176 0 0,1 426,250" />
+              <path id="arc3" d="M 92,250 A 158,158 0 0,1 408,250" />
+              <path id="arc2" d="M 110,250 A 140,140 0 0,1 390,250" />
+              <path id="arc1" d="M 128,250 A 122,122 0 0,1 372,250" />
+            </defs>
+            <use href="#arc7" fill="none" stroke="#ff0000" strokeWidth="16" />
+            <use href="#arc6" fill="none" stroke="#ff7f00" strokeWidth="16" />
+            <use href="#arc5" fill="none" stroke="#ffff00" strokeWidth="16" />
+            <use href="#arc4" fill="none" stroke="#00cc00" strokeWidth="16" />
+            <use href="#arc3" fill="none" stroke="#0000ff" strokeWidth="16" />
+            <use href="#arc2" fill="none" stroke="#4b0082" strokeWidth="16" />
+            <use href="#arc1" fill="none" stroke="#8b00ff" strokeWidth="16" />
+          </svg>
           <div className="relative z-10 inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 text-4xl mb-5 shadow-xl shadow-amber-500/30">
             🌴
           </div>
